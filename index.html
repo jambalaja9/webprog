@@ -1,6 +1,9 @@
+<!DOCTYPE html>
 <html>
     <head>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" href="login.css">
+    <script type="text/javascript" src="login.js"></script>
     </head>
     
     <body>
@@ -9,30 +12,37 @@
         </header>
         
         <main>
-               <form action="/login" method="post">
+            
+            <div id="login">
+               <form name="Login">
                
-                <div class="login">   
-                <table>
+                <div class="login" align="center">   
+                <table id="logint">
                   <tr>
-                      <td>
-                        <p>User-ID</p>
+                      <td >
+                        User-ID
                       </td>
                       <td>
-                        <input type="text">
+                        <input type="text" name="User" id="user">
                       </td>
                    </tr>
                   <tr>
                       <td>
-                        <p>Passwort</p>
+                        Passwort
                       </td>
                       <td>
-                        <input type="password" required>
+                        <input type="password" name="Passwort" id="passwort" required>
                       </td>
                    </tr>
                </table>
-                   <input type="submit" value="LogIn"/>
+                    <button type="submit" id="loginbutton" onclick="checkLogin()">LogIn</button>
                 </div>
             </form>
+            </div>
+            
+            <div id="home">
+            
+            </div>
         </main>
         
         <footer>
