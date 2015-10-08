@@ -1,0 +1,30 @@
+p.footer{
+font-family:sans-serif;
+font-size: 9px
+}
+
+div.login{
+width: 500px;
+height: 100px;
+background-color: darkgray
+}
+
+
+header{
+border-style: hidden;
+border-color: #40FF00;
+background-color: #40FF00;
+}
+
+main{
+border-style: solid;
+border-color: #40FF00;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+footer{
+border-style: solid;
+border-color: #40FF00;
+background-color: #40FF00;
+}
