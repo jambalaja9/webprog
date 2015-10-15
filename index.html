@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="login.css">
     <script type="text/javascript" src="login.js"></script>
+   
     </head>
     
     <body>
@@ -13,8 +14,8 @@
         
         <main>
             
-            <div id="login">
-               <form name="Login">
+            <div id="login" style="display: block;">
+               <form name="Login" onSubmit="return checkLogin()">
                
                 <div class="login" align="center">   
                 <table id="logint">
@@ -23,7 +24,7 @@
                         User-ID
                       </td>
                       <td>
-                        <input type="text" name="User" id="user">
+                        <input type="text" id="user">
                       </td>
                    </tr>
                   <tr>
@@ -31,18 +32,27 @@
                         Passwort
                       </td>
                       <td>
-                        <input type="password" name="Passwort" id="passwort" required>
+                        <input type="password" id="passwort" required>
                       </td>
                    </tr>
                </table>
-                    <button type="submit" id="loginbutton" onclick="checkLogin()">LogIn</button>
+                    <input type="submit" id="loginbutton" value="Login">
                 </div>
             </form>
             </div>
             
-            <div id="home">
-            
+            <div id="calender" style="display: none;">
+            <h1>kalender</h1>
             </div>
+            
+            <div id="home" style="display: none;">
+            <h1>Home</h1>
+            </div>
+            
+            <div id="picture" style="display: none;">
+            <h1>picture</h1>
+            </div>
+            
         </main>
         
         <footer>
