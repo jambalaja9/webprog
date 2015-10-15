@@ -175,7 +175,7 @@ function loadcalendar()
 			if (!getEventtext(y,m,zahl))
 				{entry.style.color='000000';}
 			else{
-				entry.style.color='00FF00';
+				entry.style.color='40FF00';
 				//Eventtext wird als Tooltip angezeigt
 				entry.title = getEventtext(y,m,zahl);
 				bEvent = true;
@@ -248,7 +248,7 @@ function getEventtext(y,m,d)
 	h[4] = "12.4.2014|Balinger Rockfestival, Dillingen";
 	h[5] = "5.7.2014|HipHop Open, Stuttgart";
 	h[6] = "19.7.2014|Feeling Fine Festival, Espelkamp";
-	h[7] = "26.7.2014|Beach Party, Duisburg";
+	h[7] = "26.10.2015|Beach Party, Duisburg";
 	
 	var dH;
 	var eH;
@@ -263,6 +263,15 @@ function getEventtext(y,m,d)
 		}
 	}
 	return false;
+}
+
+function  newEvent(y,m,d)
+{
+	//convertieren in int-Zahlen
+	y = parseInt(y);
+	m = parseInt(m);
+	d = parseInt(d);
+    
 }
 
 /**
