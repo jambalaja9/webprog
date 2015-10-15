@@ -1,47 +1,43 @@
+//var pw = "root";
+//var userdatenbank = ["raphael", "patrick", "maike", "maria"];
 var userdatenbank = [{name: "raphael", passwort: "pw1"},
                      {name: "patrick", passwort: "pw2"},
                      {name: "maike", passwort: "pw3"},
                      {name: "maria", passwort: "pw4"}];
 
-
 function getName() {
- var name = document.getElementById("user").value;
+ var name = document.Login.User.value;
     return name;
 }
 
 function getPasswort() {
- var pw = document.getElementById("passwort").value;
-    return pw;
+ var name = document.Login.Passwort.value;
+    return passwort;
 }
 
 function check(value) {
-    return value.name === getName()  && value.passwort === getPasswort() ;
+    if('name' in value == getName()  && 'passwort' in value == getPasswort()){
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
-function checkLogin(e) {
+var filteredUser = userdatenbank.filter(check);
 
-var filteredUser = userdatenbank.filter(check); 
 
-    if(filteredUser.length > 0) {   
+function checkLogin() {
+    alert("bla");
+    
+    if(!filteredUser == "" ) {   
         alert("so true");
-       
-     //document.location = "kalender.html"
-
-     history.pushState(null,"" ,"calender.html");
-     
-        if(window.location.href.indexOf("calender") > -1) {
-            document.getElementById("login").style.display = "none";
-            document.getElementById("calender").style.display = "block";
-            document.getElementById("home").style.display = "none";
-            document.getElementById("picture").style.display = "none";
-        }
-        
-        return false;
+        navigate("home");
             }
     else
     {
-        alert("Falsche ");
-        return false;
+        alert("Falsche");
     }
 }
 
