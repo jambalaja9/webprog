@@ -31,9 +31,9 @@ var filteredUser = userdatenbank.filter(check);
      
         if(window.location.href.indexOf("home") > -1) {
             document.getElementById("login").style.display = "none";
-            document.getElementById("calender").style.display = "none";
+            document.getElementById("calendar").style.display = "none";
             document.getElementById("home").style.display = "block";
-            document.getElementById("picture").style.display = "none";
+            document.getElementById("file").style.display = "none";
         }
         
         return false;
@@ -44,5 +44,3 @@ var filteredUser = userdatenbank.filter(check);
         return false;
     }
 }
-
-

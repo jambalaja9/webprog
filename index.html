@@ -3,13 +3,17 @@
     <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="login.css">
-    <script type="text/javascript" src="login.js"></script>
+    <link rel="stylesheet" href="home.css">
     <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="nav.js"></script>
     </head>
     
     <body>
         <header>
-            <h1>WWI14AMB</h1>
+            <h1 class="title">WWI14AMB</h1>
+            <input class="navbutton" type="button" value="←" onclick="back()">
+            <input class="navbutton" type="button" value="→" onclick="forward()">
         </header>
         
         <main>
@@ -17,8 +21,8 @@
             <div id="login" style="display: block;">
                <form name="Login" onSubmit="return checkLogin()">
                
-                <div class="login" align="center">   
-                <table id="logint">
+                <div class="wrapper">   
+                <table id="logint" style="display: inline-block">
                   <tr>
                       <td >
                         User-ID
@@ -36,23 +40,31 @@
                       </td>
                    </tr>
                </table>
+                    <p>
                     <input type="submit" id="loginbutton" value="Login">
+                    </p>
                 </div>
             </form>
             </div>
             
-            <div id="calender" style="display: none;">
-            <iframe src="calendar/calendar.html" width="500" height="300">
-            </iframe> 
+            <div id="calendar" style="display: none;">
+                <h1>Kalender</h1>
+            
             </div>
             
             <div id="home" style="display: none;">
             <h1>Home</h1>
-                <canvas id="calendarcanvas" ></canvas>
-                <canvas id="picturecanvas" ></canvas>
+                <div class="wrapper">
+                <tabe>
+                    <tr>
+                        <td><input class="buttonafterhome left" type="button" id="calendarbutton" value="Kalender" onclick="navcalendar()"></td>
+                        <td><input class="buttonafterhome rigth" type="button" id="filebutton" value="File-Sharing" onclick="navfile()"></td>
+                    </tr>
+                </tabe>
+                </div>
             </div>
             
-            <div id="picture" style="display: none;">
+            <div id="file" style="display: none;">
             <h1>picture</h1>
             </div>
             
