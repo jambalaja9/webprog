@@ -54,6 +54,7 @@
             
             <div id="home" style="display: none;">
             <h1>Home</h1>
+                <h3 id="welcome"></h3>
                 <div class="wrapper">
                 <tabe>
                     <tr>
@@ -62,6 +63,43 @@
                     </tr>
                 </tabe>
                 </div>
+                
+              
+                
+                <div id="commentlist">
+                    <p id="commentlistp">Kommentare</p>
+                </div>
+                
+                <div id="comment">
+                    <div class="wrapper">
+                    <form onSubmit="return comment()">
+                        <table>
+                            <tr>
+                                <td>
+                                    Name
+                                </td>
+                                <td style="text-align: left;">
+                                    <input type="text" id="commentname" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Kommentar
+                                </td>
+                                <td>
+                                    <textarea id="commentcontent" cols="50" rows="5" required></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" >
+                                <input type="submit" id="commentbutton" value="Abschicken">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    </div>
+                </div>
+
             </div>
             
             <div id="file" style="display: none;">

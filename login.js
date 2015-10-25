@@ -1,8 +1,9 @@
-var userdatenbank = [{name: "raphael", passwort: "pw1"},
-                     {name: "patrick", passwort: "pw2"},
-                     {name: "maike", passwort: "pw3"},
-                     {name: "maria", passwort: "pw4"}];
+var userdatenbank = [{name: "Raphael", passwort: "pw1"},
+                     {name: "Patrick", passwort: "pw2"},
+                     {name: "Maike", passwort: "pw3"},
+                     {name: "Maria", passwort: "pw4"}];
 
+var user ;
 
 function getName() {
  var name = document.getElementById("user").value;
@@ -25,7 +26,9 @@ var filteredUser = userdatenbank.filter(check);
     if(filteredUser.length > 0) {   
         alert("so true");
        
-     //document.location = "kalender.html"
+     var welcome = "Herzlich Willkommen ";
+        user=document.getElementById("user").value;
+        welcome += user;
 
      history.pushState(null,"" ,"home.html");
      
@@ -36,6 +39,9 @@ var filteredUser = userdatenbank.filter(check);
             document.getElementById("file").style.display = "none";
         }
         
+        
+        document.getElementById("welcome").innerHTML= welcome;
+        
         return false;
             }
     else
@@ -44,3 +50,19 @@ var filteredUser = userdatenbank.filter(check);
         return false;
     }
 }
+
+
+function comment(e){
+    
+    
+    var lbl = document.createElement("label");
+    lbl.innerHTML = user + "[" + Date() + "]:"+ document.getElementById("commentcontent").value;
+    
+    document.getElementById("commentlistp").appendChild(lbl);
+    
+    
+    
+    return false;
+}
+
+
