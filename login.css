@@ -6,6 +6,7 @@ font-size: 9px
 body{
     background-image: url(bilder/background.png);
     background-repeat: repeat;
+    font-family: sans-serif;
 }
 
 header{
