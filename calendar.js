@@ -171,20 +171,22 @@ function loadcalendar()
 			entry.innerHTML = '<a class = calendar_link href=javascript:putDate('+zahl+')>'+zahl+'</a>';
 			entry.hidden = false;
 			entry.style.visibility='visible';
-			entry.style.border = 'solid 4px';
+			entry.style.border = 'solid 5px';
+            entry.style.borderRadius = '50px';
             //ab hier übernimmt er die funktionen nicht, damit die Farbe angepasst wird. Warum????
 			//wenn Event ist
 			if (!getEventtext(y,m,zahl))
 				{entry.style.color="white";}
 			else{
 				entry.style.color="green";
+                //entry.style.fontWeight = "bold";
 				//Eventtext wird als Tooltip angezeigt
 				entry.title = getEventtext(y,m,zahl);
 				bEvent = true;
 			}
 			//Wenn Tag ein Feiertag ist
 			if (isHoliday(m, zahl))
-				{entry.style.backgroundColor="red";}
+				{entry.style.color="red";}
 			else{
 				if (!bEvent)
 					entry.style.color="white";
@@ -195,8 +197,8 @@ function loadcalendar()
 				hD.getMonth() == dx.getMonth() && 
 				hD.getYear() == dx.getYear())
 			{
-				entry.style.fontWeight = "bold";
-				entry.style.backgroundColor = "yellow";
+				
+				entry.style.color = "yellow";
 			}
 			
 				
@@ -286,14 +288,6 @@ function hinzu() {
     h.push(var d.concat(m,y, linie, entry);
 }*/
 
-function  newEvent(y,m,d)
-{
-	//convertieren in int-Zahlen
-	y = parseInt(y);
-	m = parseInt(m);
-	d = parseInt(d);
-    
-}
 
 /**
 * Ist das Angegebene Datum ein Feiertag?
