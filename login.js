@@ -24,7 +24,6 @@ function checkLogin(e) {
 var filteredUser = userdatenbank.filter(check); 
 
     if(filteredUser.length > 0) {   
-        alert("so true");
        
      var welcome = "Herzlich Willkommen ";
         user=document.getElementById("user").value;
@@ -32,13 +31,7 @@ var filteredUser = userdatenbank.filter(check);
 
      history.pushState(null,"" ,"home.html");
      
-        if(window.location.href.indexOf("home") > -1) {
-            document.getElementById("login").style.display = "none";
-            document.getElementById("calendar").style.display = "none";
-            document.getElementById("home").style.display = "block";
-            document.getElementById("file").style.display = "none";
-        }
-        
+      navigate();
         
         document.getElementById("welcome").innerHTML= welcome;
         
@@ -46,7 +39,7 @@ var filteredUser = userdatenbank.filter(check);
             }
     else
     {
-        alert("Falsche ");
+        ;
         return false;
     }
 }

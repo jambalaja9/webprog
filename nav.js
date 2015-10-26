@@ -1,10 +1,22 @@
 window.addEventListener("popstate",navigate);
 
 
+function navcalendar(){
+    
+    history.pushState(null,"" ,"calendar.html");
+    navigate();
+}
+
+function navfile(){
+    
+    history.pushState(null,"" ,"file.html"); 
+    navigate();
+}
+
+
 
 function navigate() {
           
-    alert("back");
     if(window.location.href.indexOf("home") > -1) {
     
         document.getElementById("login").style.display = "none";
