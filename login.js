@@ -47,17 +47,60 @@ var filteredUser = userdatenbank.filter(check);
 
 function comment(e){
     
-    var tbl = document.createElement("table");
-    tbl.setAttribute("style","border: 1px solid;");
-    tbl.setAttribute("align","center")
 
-    tbl.innerHTML = "<tr><td style='text-align: left'>"+user + "[" + Date() + "]:"+"</td></tr><tr><td style='text-align: left'>"+document.getElementById("commentcontent").value+"</td></tr>";
-    
-document.getElementById("commentlistp").appendChild(tbl);
+    var xc = document.createElement("x-comment");
 
-    
+    document.getElementById("commentlistp").appendChild(xc);
+    document.getElementById("commentcontent").value = "";
     
     return false;
 }
 
+/////Custom compononent für die Kommentare////
+var date = new Date();
+var aktDate = date.toUTCString(); //optional, da nur GMT und nicht MEZ angezeigt wir(1h unsterschied)
 
+
+var XCommentProto = Object.create(HTMLElement.prototype);
+
+XCommentProto.getContent = function (){
+    return document.getElementById("commentcontent").value;
+};
+
+XCommentProto.createdCallback = function (){
+    
+    var shadow = this.createShadowRoot();
+    
+    var tdname = document.createElement("td");
+    tdname.className = "xcomment-tdname";
+    tdname.innerText = user;
+    
+    var tdcontent = document.createElement("td");
+    tdcontent.className = "xcomment-tdcontent";
+    tdcontent.innerText = this.getContent();
+    //tdcontent.innerText = this.getAttribute("data-content");
+    
+    var trname = document.createElement("tr");
+    
+    
+    var trcontent = document.createElement("tr");
+    
+    
+    var table = document.createElement("table");
+    table.className = "xcomment-table";
+    table.align = "center"; 
+    
+    
+    
+    trname.appendChild(tdname);
+    trcontent.appendChild(tdcontent)
+    
+    table.appendChild(trname);
+    table.appendChild(trcontent);
+    
+
+    shadow.appendChild(table);
+};
+    var xcomment = document.registerElement("x-comment",{
+        prototype: XCommentProto
+    });
