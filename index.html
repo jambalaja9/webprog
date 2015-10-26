@@ -195,30 +195,23 @@
             
             <div id="file" style="display: none;">
             <h1>files</h1>
-               <div> <select name="file" size="10" onchange="alert(this.form.Pizza.options[this.form.Pizza.selectedIndex].value)">
+               <div> <select name="file" size="10" onchange="alert()">
     <option value="F1">Datei1</option>
 
  </select>
                 </div>
                 <br>
                 <div>
-                <input type="file" name="file[]" multile />
-                <output id="list"></output>
+                    <form action="index.html" method="post" enctype="multipart/form-data">
+  
+    <input name="Datei" type="file" size="50" accept="*" multiple> 
+ 
+  <button type="submit">upload</button>
+</form>
                 
-                <script>
-                    function handleFileSelect(evt){
-                     var files = evt.target.files
-                     
-                     var output = [];
-                        for (var i = 0; f = files[i]; i++) {
-                        output.push('<li><strong>',escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                        f.size, 'bytes, last modified; ',
-                        f.lastModifiedDate.toLocaleDateString(), '</li>');
-                        }
-                        document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-                    }
-                    
-<!--hier zeigt Konsole ein Fehler-->                  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+                   
+    
+                
                 </script>       
             </div>
           </div>  
