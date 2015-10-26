@@ -167,13 +167,15 @@ function loadcalendar()
 		//Eintragen der Daten ab ersten Tag im Monat und wenn es ein gueltiges Datum ist
 		if (i >= dateDay && isValidDate(y,m,zahl))		
 		{
-			entry.innerHTML = '<a class=calendar_link href=javascript:putDate('+zahl+')>'+zahl+'</a>';
+			entry.innerHTML = '<a class = calendar_link href=javascript:putDate('+zahl+')>'+zahl+'</a>';
 			entry.hidden = false;
 			entry.style.visibility='visible';
-			entry.style.border = 'solid 1px';
+			entry.style.border = 'solid 4px';
+            //ab hier übernimmt er die funktionen nicht, damit die Farbe angepasst wird. Warum????
+            entry.style.color = 'FFFFFF';
 			//wenn Event ist
 			if (!getEventtext(y,m,zahl))
-				{entry.style.color='000000';}
+				{entry.style.color='FFFFFF';}
 			else{
 				entry.style.color='40FF00';
 				//Eventtext wird als Tooltip angezeigt
@@ -181,11 +183,11 @@ function loadcalendar()
 				bEvent = true;
 			}
 			//Wenn Tag ein Feiertag ist
-			if (isHoliday(m,zahl))
+			if (isHoliday(m, zahl))
 				{entry.style.color='FF0000';}
 			else{
 				if (!bEvent)
-					entry.style.color='000000';
+					entry.style.color='FFFFFF';
 			}
 						
 			//heutiges Datum hervorheben			
@@ -213,6 +215,7 @@ function loadcalendar()
 			{//Wenn Kalenderanfang
 				//Border-width = 0px
 				entry.style.border = '0px';
+          
 			}
 		} 				  				
 	}		
@@ -234,36 +237,51 @@ function getEventtext(y,m,d)
 	m = parseInt(m);
 	d = parseInt(d);
 	
-	//Monate fangen bei 0 an zuzaehlen
+		//Monate fangen bei 0 an zuzählen
 	m++;
 	//definieren der Events
-	var h = new Array(7);
+	var h = new Array();
 	
 	//exemplarisch nehme ich eine
 	//Liste an Festivals her
-	h[0] = "22.1.2014|Rap Mayhem Festival, Muenchen";
-	h[1] = "1.2.2014|Spirit Of Goa, Hamburg";
-	h[2] = "16.2.2014|Emergenza Acoustic Festival, Berlin";
-	h[3] = "2.3.2014|Skarneval Koblenz, Wehdem";
-	h[4] = "12.4.2014|Balinger Rockfestival, Dillingen";
-	h[5] = "5.7.2014|HipHop Open, Stuttgart";
-	h[6] = "19.7.2014|Feeling Fine Festival, Espelkamp";
-	h[7] = "26.10.2015|Beach Party, Duisburg";
+	h[h.length] = "22.1.2015|Rap Mayhem Festival, München";
+	h[h.length] = "1.2.2015|Spirit Of Goa, Hamburg";
+	h[h.length] = "16.2.2015|Emergenza Acoustic Festival, Berlin";
+	h[h.length] = "2.3.2015|Skarneval Koblenz, Wehdem";
+	h[h.length] = "12.4.2015|Balinger Rockfestival, Dillingen";
+	h[h.length] = "5.7.2015|HipHop Open, Stuttgart";
+	h[h.length] = "19.7.2015|Feeling Fine Festival, Espelkamp";
+	h[h.length] = "26.7.2015|Beach Party, Duisburg";
+    h[h.length] = "25.10.2015|Beach Party, Duisburg";
+    h[h.length] = "26.10.2015|Beach Party, Duisburg";
+    
 	
 	var dH;
 	var eH;
 	for ( var i = 0; i < h.length; i++) {
 		//Datum eH[0] von Event eH[1] trennen
 		eH = h[i].split("|");
+          
 		//Datum trennen > Tag dH[0], Monat dH[1], Jahr dH[2]
 		dH = eH[0].split(".");
 		
 		if (parseInt(dH[0]) == d && parseInt(dH[1]) == m && parseInt(dH[2]) == y) {
-			return eH[1];
+			//return eH[1];
+            return h[i];
 		}
 	}
 	return false;
 }
+
+// evtl noch fehler in der funktion
+/*function loeschen() {
+ delete h[i];
+}
+
+function hinzu() {
+    var linie = "I"
+    h.push(var d.concat(m,y, linie, entry);
+}*/
 
 function  newEvent(y,m,d)
 {
