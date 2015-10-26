@@ -35,8 +35,8 @@ function navigate() {
         
         document.getElementById("login").style.display = "none";
         document.getElementById("calendar").style.display = "none";
-        document.getElementById("home").style.display = "block";
-        document.getElementById("file").style.display = "none";
+        document.getElementById("home").style.display = "none";
+        document.getElementById("file").style.display = "block";
     }
     else if(window.location.href.indexOf("calendar") > -1) {
         
