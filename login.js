@@ -54,12 +54,13 @@ var filteredUser = userdatenbank.filter(check);
 
 function comment(e){
     
+    var tbl = document.createElement("table");
+    tbl.setAttribute("style","border: 1px solid;")
+
+    tbl.innerHTML = "<tr><td>"+user + "[" + Date() + "]:"+"</td></tr><tr><td>"+document.getElementById("commentcontent").value+"</td></tr>";
     
-    var lbl = document.createElement("label");
-    lbl.innerHTML = user + "[" + Date() + "]:"+ document.getElementById("commentcontent").value;
-    
-    document.getElementById("commentlistp").appendChild(lbl);
-    
+document.getElementById("commentlist").appendChild(tbl);
+
     
     
     return false;
