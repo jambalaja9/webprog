@@ -49,6 +49,7 @@ function putDate(n)
 	}
 	
 	document.forms['myform'].elements['datum'].value = returnValue;
+    //document.forms['myform'].elements['datum'].value = returnValue.description;
 }
 /**
 * setzt das uebergebene Datum in die Speicherzelle
@@ -172,8 +173,6 @@ function loadcalendar()
 			entry.style.visibility='visible';
 			entry.style.border = 'solid 4px';
             //ab hier übernimmt er die funktionen nicht, damit die Farbe angepasst wird. Warum????
-
-            entry.style.color = "white";
 			//wenn Event ist
 			if (!getEventtext(y,m,zahl))
 				{entry.style.color="white";}
@@ -196,7 +195,7 @@ function loadcalendar()
 				hD.getMonth() == dx.getMonth() && 
 				hD.getYear() == dx.getYear())
 			{
-				entry.style.fontWeight = 'bold';
+				entry.style.fontWeight = "bold";
 				entry.style.backgroundColor = "yellow";
 			}
 			
@@ -245,6 +244,7 @@ function getEventtext(y,m,d)
 	
 	//exemplarisch nehme ich eine
 	//Liste an Festivals her
+    //h.push( { "date" : "22.1.15", description : "flkajsflkjasdfladsjf"} );
 	h[h.length] = "22.1.2015|Rap Mayhem Festival, München";
 	h[h.length] = "1.2.2015|Spirit Of Goa, Hamburg";
 	h[h.length] = "16.2.2015|Emergenza Acoustic Festival, Berlin";
@@ -256,12 +256,14 @@ function getEventtext(y,m,d)
     h[h.length] = "25.10.2015|Beach Party, Duisburg";
     h[h.length] = "26.10.2015|Beach Party, Duisburg";
     
-	
+	//h[0].date
 	var dH;
 	var eH;
 	for ( var i = 0; i < h.length; i++) {
 		//Datum eH[0] von Event eH[1] trennen
 		eH = h[i].split("|");
+        //dH = h[i].date.split(".");
+        //eH= h[i];
           
 		//Datum trennen > Tag dH[0], Monat dH[1], Jahr dH[2]
 		dH = eH[0].split(".");
