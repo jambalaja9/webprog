@@ -78,6 +78,7 @@ XCommentProto.createdCallback = function (){
     var tdcontent = document.createElement("td");
     tdcontent.className = "xcomment-tdcontent";
     tdcontent.innerText = this.getContent();
+    tdcontent.style = "text-align: left";
     //tdcontent.innerText = this.getAttribute("data-content");
     
     var trname = document.createElement("tr");
@@ -88,7 +89,8 @@ XCommentProto.createdCallback = function (){
     
     var table = document.createElement("table");
     table.className = "xcomment-table";
-    table.align = "center"; 
+    table.align = "center";
+    
     
     
     

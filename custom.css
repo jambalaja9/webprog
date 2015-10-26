@@ -12,12 +12,14 @@ x-comment::shadow .xcomment-tdname{
     font-family: Calibri;
     font-size: 20px;
     font-weight: bold;
+    text-align: left;
     
 }
 
 x-comment::shadow .xcomment-tdcontent{
     font-family: Calibri;
     font-weight: normal;
+    text-align: left;
 }
 
 x-comment{
