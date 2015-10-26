@@ -305,15 +305,15 @@ function isHoliday(m,d)
 	//Monate fangen bei 0 an zuzaehlen
 	m++;
 	//festlegen der Feiertage
-	var h = new Array(7);
-	h[0] = "1.1";
-	h[1] = "6.1";
-	h[2] = "1.5";
-	h[3] = "3.10";
-	h[4] = "1.11";
-	h[5] = "25.12";
-	h[6] = "26.12";
-	h[7] = "31.12";
+	var h = new Array();
+	h[h.length] = "1.1";
+	h[h.length] = "6.1";
+	h[h.length] = "1.5";
+	h[h.length] = "3.10";
+	h[h.length] = "1.11";
+	h[h.length] = "25.12";
+	h[h.length] = "26.12";
+	h[h.length] = "31.12";
 	var iD;
 	//Alle Daten Testen
 	for ( var i = 0; i < h.length; i++) {
