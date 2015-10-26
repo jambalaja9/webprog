@@ -4,7 +4,6 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="home.css">
-    <script type="text/javascript" src="home.js"></script>
     <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="nav.js"></script>
         <script type="text/javascript" src="calendar.js"></script>
@@ -24,7 +23,7 @@
                 <div class="wrapper">   
                 <table id="logint" style="display: inline-block">
                   <tr>
-                      <td >
+                      <td style="text-align: left">
                         User-ID
                       </td>
                       <td>
@@ -43,8 +42,11 @@
                     <p>
                     <input type="submit" id="loginbutton" value="Login">
                     </p>
+                    <p  id="errorlogin" style="color: #FF0000;"> </p>
                 </div>
             </form>
+                
+                
             </div>
             
             <div id="calendar" style="display: none;">

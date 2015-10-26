@@ -39,7 +39,7 @@ var filteredUser = userdatenbank.filter(check);
             }
     else
     {
-        ;
+        document.getElementById("errorlogin").innerHTML = "Falsche Benutzer-Passwort Kombination!";
         return false;
     }
 }
