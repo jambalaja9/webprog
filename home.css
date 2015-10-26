@@ -23,15 +23,10 @@
     cursor:pointer;
 }
 
-.left{
-    
-}
-
-.rigth{
-    
-}
-
 #bild {
-
+    
+max-height: 500px;
+    width:inherit;
+    
     
 }

@@ -201,41 +201,21 @@
             
             <div id="file" style="display: none;">
             <h1>files</h1>
-               <div> <select name="file" size="10" onchange="alert()">
-    <option value="F1">Datei1</option>
-
- </select>
-                </div>
-                <br>
+               
                 <div>
   
     <input accept="*" type="file" id="files2" name="files[]" multiple onChange="test(this.files)" />
-                    
+      <br>              
     <img id="bild">
     
 <script>
     function test(fileObj) {
-        console.log("Ich wurde aufgerufen.")
-       
-        console.log(fileObj)
-       
-        var objectURL = window.URL.createObjectURL(fileObj[0]);
-       
-        console.log(objectURL);
-       
+        var objectURL = window.URL.createObjectURL(fileObj[0]);    
         document.getElementById("bild").setAttribute("src", objectURL);
        
     }
 </script>
-                        
-
-                
-                   
-    
-                
-                </script>       
-            </div>
-          </div>  
+             </div>  
         </main>
         
         <footer>
