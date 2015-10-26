@@ -23,6 +23,32 @@
     cursor:pointer;
 }
 
+#commentcontent{
+    font-family: sans-serif;
+    resize: none;
+    border: solid 1px #e6e6e6;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: inset 0px 0px 10px 1px rgba(217,217,217,1);
+}
+
+#commentbutton{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #ff0000;
+    
+    border-radius: 10px 10px 10px 10px;
+
+    cursor:pointer;
+}
+
+#commentform{
+    border: 1px solid #e6e6e6;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 10px 0.5px rgba(0,0,0,0.25);
+}
+
 #bild {
     
 max-height: 500px;
