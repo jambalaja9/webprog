@@ -43,6 +43,9 @@
     border-color: white;
 }
 
+.calendar_entry:hover {
+    background: #66FFF0;}
+
 .button {
 width: 120px;
 height: 20px; 
