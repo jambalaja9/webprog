@@ -204,12 +204,27 @@
                 </div>
                 <br>
                 <div>
-                    <form action="index.html" method="post" enctype="multipart/form-data">
   
-    <input name="Datei" type="file" size="50" accept="*" multiple> 
- 
-  <button type="submit">upload</button>
-</form>
+    <input accept="*" type="file" id="files2" name="files[]" multiple onChange="test(this.files)" />
+                    
+    <img id="bild">
+    
+<script>
+    function test(fileObj) {
+        console.log("Ich wurde aufgerufen.")
+       
+        console.log(fileObj)
+       
+        var objectURL = window.URL.createObjectURL(fileObj[0]);
+       
+        console.log(objectURL);
+       
+        document.getElementById("bild").setAttribute("src", objectURL);
+       
+    }
+</script>
+                        
+
                 
                    
     
