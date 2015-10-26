@@ -172,22 +172,22 @@ function loadcalendar()
 			entry.style.visibility='visible';
 			entry.style.border = 'solid 4px';
             //ab hier übernimmt er die funktionen nicht, damit die Farbe angepasst wird. Warum????
-            entry.style.color = 'FFFFFF';
+            //entry.style.color = "white";
 			//wenn Event ist
 			if (!getEventtext(y,m,zahl))
-				{entry.style.color='FFFFFF';}
+				{entry.style.color="white";}
 			else{
-				entry.style.color='40FF00';
+				entry.style.color="green";
 				//Eventtext wird als Tooltip angezeigt
 				entry.title = getEventtext(y,m,zahl);
 				bEvent = true;
 			}
 			//Wenn Tag ein Feiertag ist
 			if (isHoliday(m, zahl))
-				{entry.style.color='FF0000';}
+				{entry.style.backgroundColor="red";}
 			else{
 				if (!bEvent)
-					entry.style.color='FFFFFF';
+					entry.style.color="white";
 			}
 						
 			//heutiges Datum hervorheben			
@@ -196,7 +196,7 @@ function loadcalendar()
 				hD.getYear() == dx.getYear())
 			{
 				entry.style.fontWeight = 'bold';
-				entry.style.backgroundColor = 'FFFF33';
+				entry.style.backgroundColor = "yellow";
 			}
 			
 				
