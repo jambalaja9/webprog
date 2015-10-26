@@ -172,7 +172,7 @@ function loadcalendar()
 			entry.style.visibility='visible';
 			entry.style.border = 'solid 4px';
             //ab hier übernimmt er die funktionen nicht, damit die Farbe angepasst wird. Warum????
-            entry.style.color = 'FFFFFF';
+            entry.style.borderColor = 'FFFFFF';
 			//wenn Event ist
 			if (!getEventtext(y,m,zahl))
 				{entry.style.color='FFFFFF';}

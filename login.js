@@ -55,10 +55,18 @@ var filteredUser = userdatenbank.filter(check);
 function comment(e){
     
     
-    var lbl = document.createElement("label");
+    var lbl = document.createElement("p");
     lbl.innerHTML = user + "[" + Date() + "]:"+ document.getElementById("commentcontent").value;
     
-    document.getElementById("commentlistp").appendChild(lbl);
+    document.getElementById("commentcontent").value = "";
+    
+    
+    document.getElementById("commentlist").appendChild(tbl);
+    document.getElementById("commentlist").appendChild(tr);
+    document.getElementById("commentlist").appendChild(td);
+    document.getElementById("commentlist").appendChild(td2);
+    document.getElementById("commentlist").appendChild(tr2);
+    document.getElementById("commentlist").appendChild(lbl);
     
     
     
