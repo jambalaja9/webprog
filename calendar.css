@@ -38,7 +38,9 @@
 .calendar_entry {
 	font-family: monospace;
 	font-size: 40px;
-	text-align: center; 
+	text-align: center;
+    background-color: white;
+    border-color: white;
 }
 
 .button {
