@@ -50,6 +50,7 @@ function putDate(n)
 	
 	document.forms['myform'].elements['datum'].value = returnValue;
     //document.forms['myform'].elements['datum'].value = returnValue.description;
+    
 }
 /**
 * setzt das uebergebene Datum in die Speicherzelle
@@ -68,6 +69,7 @@ function getDateFromMemory()
 	var s = document.all.date_memory.innerHTML;
 	var z = s.split(',');
 	return new Date(z[0],z[1]-1,z[2]);
+    
 }
 /**
 * schaltet einen Monat Weiter
@@ -178,7 +180,7 @@ function loadcalendar()
 			if (!getEventtext(y,m,zahl))
 				{entry.style.color="white";}
 			else{
-				entry.style.color="green";
+				entry.style.color="grey";
                 //entry.style.fontWeight = "bold";
 				//Eventtext wird als Tooltip angezeigt
 				entry.title = getEventtext(y,m,zahl);
@@ -186,7 +188,9 @@ function loadcalendar()
 			}
 			//Wenn Tag ein Feiertag ist
 			if (isHoliday(m, zahl))
-				{entry.style.color="red";}
+				{entry.style.border = 'solid 2px';
+            entry.style.borderRadius = '0px';
+                    entry.style.color= "rgb(255, 51, 51)";}
 			else{
 				if (!bEvent)
 					entry.style.color="white";
@@ -198,7 +202,7 @@ function loadcalendar()
 				hD.getYear() == dx.getYear())
 			{
 				
-				entry.style.color = "yellow";
+				entry.style.color = "black";
 			}
 			
 				
@@ -249,14 +253,15 @@ function getEventtext(y,m,d)
     //h.push( { "date" : "22.1.15", description : "flkajsflkjasdfladsjf"} );
 	h[h.length] = "22.1.2015|Rap Mayhem Festival, München";
 	h[h.length] = "1.2.2015|Spirit Of Goa, Hamburg";
-	h[h.length] = "16.2.2015|Emergenza Acoustic Festival, Berlin";
-	h[h.length] = "2.3.2015|Skarneval Koblenz, Wehdem";
-	h[h.length] = "12.4.2015|Balinger Rockfestival, Dillingen";
-	h[h.length] = "5.7.2015|HipHop Open, Stuttgart";
-	h[h.length] = "19.7.2015|Feeling Fine Festival, Espelkamp";
-	h[h.length] = "26.7.2015|Beach Party, Duisburg";
-    h[h.length] = "25.10.2015|Beach Party, Duisburg";
-    h[h.length] = "26.10.2015|Beach Party, Duisburg";
+	h[h.length] = "16.3.2015|Emergenza Acoustic Festival, Berlin";
+	h[h.length] = "2.4.2015|Skarneval Koblenz, Wehdem";
+	h[h.length] = "12.5.2015|Balinger Rockfestival, Dillingen";
+	h[h.length] = "5.8.2015|HipHop Open, Stuttgart";
+	h[h.length] = "19.9.2015|Feeling Fine Festival, Espelkamp";
+	h[h.length] = "26.9.2015|Oktoberfest, München";
+    h[h.length] = "31.10.2015|Halloween Party, Marburg";
+    h[h.length] = "26.10.2015|Grand Opening, Duisburg";
+     h[h.length] = "11.11.2015|St. Martin Umzug, Speyer";
     
 	//h[0].date
 	var dH;
@@ -271,8 +276,8 @@ function getEventtext(y,m,d)
 		dH = eH[0].split(".");
 		
 		if (parseInt(dH[0]) == d && parseInt(dH[1]) == m && parseInt(dH[2]) == y) {
-			//return eH[1];
-            return h[i];
+			return eH[1];
+            //return h[i];
 		}
 	}
 	return false;

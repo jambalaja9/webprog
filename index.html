@@ -19,6 +19,7 @@
         <main>
             
             <div id="login" style="display: block;">
+             
                <form name="Login" onSubmit="return checkLogin()">
                
                 <div class="wrapper">   
@@ -44,9 +45,13 @@
                         <input type="submit" id="loginbutton" value="Login">
                         </td>
                     </tr>
+                    <tr>
+                      <td id="errorlogin" colspan="2" style="font-size: 85%; color: #FF0000; text-align:center; height: 20px;">
+                      </td>
+                   </tr>
                     </table>
 
-                    <p  id="errorlogin" style="color: #FF0000;"> </p>
+                <!-- <p  id="errorlogin" style="color: #FF0000;"> </p>-->
                     
                 </div>
             </form>
@@ -56,6 +61,11 @@
             
             <div id="calendar" style="display: none;">
                 <h1>Kalender</h1>
+                
+                <table id='cal'>
+                    <tr>
+                    <td>
+                        
             <table border=1 id='calendar'>
 		<tr style='visibility:collapse;' hidden>
 			<td colspan=7 id='date_memory'>---</td>
@@ -132,7 +142,7 @@
 			<td class='calendar_entry' id='calendar_entry_42'>-x-</td>
 		</tr>
 	</table>
-
+                        </td>
 	<script type='text/javascript'>
 		iniCalendar();
 		
@@ -142,18 +152,23 @@
 		Das event muss in der calendar.js in der Function
 		getEventtext definiert werden.*/
 		//setReturnModus(1);
+        
 	</script>
 
 
 	<br />
 	<br />
-	<form id='myform'>
+	<td><form id='myform'>
 		<input id='datum' size=30/>
         <br />
         <br />
         <input type="button" class="button" id="StartButton" value="Neuer Eintrag" onClick="hinzu()">
         <input type="button" class="button" id="LoeschenButton" value="Eintrag löschen" onClick="loeschen()">
-	</form>
+    </form> 
+                        
+                        </td> 
+            </tr>
+                </table>
 
             </div>
             
@@ -173,7 +188,9 @@
                 
                 <div id="commentlist">
                     <div class="wrapper" id="commentlistp">
-                    <h3 >Kommentare</h3>
+                    <h3 class= "wrapper" style="background-color: #fffffF; color: #000000; width:150px; border-radius: 20px; height: 25px;">Kommentare</h3>
+                        </br>
+                    
                     </div>
                 </div>
                 
@@ -220,7 +237,7 @@
         </main>
         
         <footer>
-        <p class="footer">Copyright by Raphael, Maria, Maike, Patrick</p>
+        <p class="footer">&copy; by Raphael, Maria, Maike, Patrick</p>
         </footer>
         
     </body>
