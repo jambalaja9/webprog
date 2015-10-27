@@ -171,8 +171,8 @@
               
                 
                 <div id="commentlist">
-                    <div class="wrapper" id="commentlistp">
-                    <h3 >Kommentare</h3>
+                    <div class="wrapper">
+                    <h3 id="commentlistp">Kommentare</h3>
                     </div>
                 </div>
                 
@@ -180,7 +180,7 @@
                     
                     <form onSubmit="return comment()">
                         <div class="wrapper">
-                        <table align="center">
+                        <table>
                             <tr>
                                 <td>
                                     <textarea id="commentcontent" cols="50" rows="5" required></textarea>
@@ -200,20 +200,27 @@
             </div>
             
             <div id="file" style="display: none;">
-            <h1>files</h1>
+            <h1>file-sharing</h1>
                
                 <div>
   
     <input accept="*" type="file" id="files" name="files[]" multiple onChange="test(this.files)" />
       <br>              
+    
     <img id="bild">
+               
     
 <script>
     function test(fileObj) {
+         //for(var i; i<fileObj.length; i++) {
+             
+        
         var objectURL = window.URL.createObjectURL(fileObj[0]);    
         document.getElementById("bild").setAttribute("src", objectURL);
-       
+            document.getElementById("bild").setAttribute("alt", URL.revokeObjectURL(fileObj[0]));
     }
+    
+    
 </script>
              </div>  
         </main>

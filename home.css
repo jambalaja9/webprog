@@ -24,10 +24,9 @@
 }
 
 #bild {
-    
-max-height: 500px;
-    width:inherit;
+    padding-top: 20px;;
+    height: 100%;
+    width: 100%;
     
     
 }
-
