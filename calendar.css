@@ -80,7 +80,8 @@ width: 300px;
     font-size: 1em;
     border-color: black;
     text-align: center;
-    min-height: 100px;
+    min-height:100px;
+    width: 300px;
     word-break: break-word;
     
 }
