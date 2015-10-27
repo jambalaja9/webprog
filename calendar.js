@@ -174,7 +174,7 @@ function loadcalendar()
 			entry.hidden = false;
 			entry.style.visibility='visible';
 			entry.style.border = 'solid 5px';
-            entry.style.borderRadius = '50px';
+            entry.style.borderRadius = '80px';
             //ab hier übernimmt er die funktionen nicht, damit die Farbe angepasst wird. Warum????
 			//wenn Event ist
 			if (!getEventtext(y,m,zahl))
