@@ -1,0 +1,29 @@
+x-comment::shadow .xcomment-table{
+    padding: 10px;
+    width: 60%;
+    background-color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 10px 10px 30px 1px rgba(255,0,0,0.3);
+}
+x-comment::shadow .xcomment-tdname{
+    height: 30px;
+    border-bottom: #e6e6e6 solid 2px;
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    
+}
+
+x-comment::shadow .xcomment-tdcontent{
+    font-family: Calibri;
+    font-weight: normal;
+    text-align: left;
+}
+
+x-comment{
+    margin: 5px;
+    width: 100%;
+    background: #ff0000;
+}
