@@ -187,10 +187,15 @@
               
                 
                 <div id="commentlist">
+
+                    <div class="wrapper">
+                    <h3 id="commentlistp">Kommentare</h3>
+
                     <div class="wrapper" id="commentlistp">
-                    <h3 class= "wrapper" style="background-color: #fffffF; color: #000000; width:150px; border-radius: 20px; height: 25px;">Kommentare</h3>
-                        </br>
                     
+                        
+                    
+
                     </div>
                 </div>
                 
@@ -198,7 +203,11 @@
                     
                     <form onSubmit="return comment()">
                         <div class="wrapper">
+
+                        <table>
+
                         <table id="commentform" align="center">
+
                             <tr>
                                 <td>
                                     <textarea id="commentcontent" cols="50" rows="5" required></textarea>
@@ -218,24 +227,44 @@
             </div>
             
             <div id="file" style="display: none;">
+
+
             <h1>File - Upload</h1>
+
                
                 <div>
   
     <input accept="*" type="file" id="files" name="files[]" multiple onChange="test(this.files)" />
+
+
+      <br> 
+                   <!-- <button type="" id="upload" onsubmit="uploadAjax(this.files)">upload</button>
+                       
+                    <br>-->
+
+      <br>              
+
+    
+
                 </br> 
                 </br>
     <img id="bild">
+               
     
 <script>
     function test(fileObj) {
+         //for(var i; i<fileObj.length; i++) {
+             
+        
         var objectURL = window.URL.createObjectURL(fileObj[0]);    
         document.getElementById("bild").setAttribute("src", objectURL);
-       
+            
     }
+    
+    
 </script>
              </div>  
-                
+                 
         </main>
         
         <footer>
