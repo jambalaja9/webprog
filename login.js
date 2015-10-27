@@ -5,6 +5,8 @@ var userdatenbank = [{name: "Raphael", passwort: "pw1"},
 
 var user ;
 
+
+
 function getName() {
  var name = document.getElementById("user").value;
     return name;
@@ -15,9 +17,18 @@ function getPasswort() {
     return pw;
 }
 
+function ucFirst() { 
+    var username = getName();
+    username = username.substring(0, 1).toUpperCase() + username.substring(1).toLowerCase();
+    document.getElementById("user").value = username;
+    return username;
+}
+
 function check(value) {
     return value.name === getName()  && value.passwort === getPasswort() ;
 }
+
+
 
 function checkLogin(e) {
 
