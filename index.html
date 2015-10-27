@@ -228,7 +228,6 @@
             
             <div id="file" style="display: none;">
 
-            <h1>file-sharing</h1>
 
             <h1>File - Upload</h1>
 
@@ -237,10 +236,14 @@
   
     <input accept="*" type="file" id="files" name="files[]" multiple onChange="test(this.files)" />
 
+
       <br> 
                    <!-- <button type="" id="upload" onsubmit="uploadAjax(this.files)">upload</button>
                        
                     <br>-->
+
+      <br>              
+
     
 
                 </br> 
@@ -252,34 +255,16 @@
     function test(fileObj) {
          //for(var i; i<fileObj.length; i++) {
              
+        
         var objectURL = window.URL.createObjectURL(fileObj[0]);    
         document.getElementById("bild").setAttribute("src", objectURL);
-            document.getElementById("bild").setAttribute("alt", URL.revokeObjectURL(fileObj[0]));
+            
     }
     
- /*   function uploadAjax(fileObj){
-        
-   var oReq = new XMLHttpRequest();
-oReq.open("GET", fileObj[0], true);
-oReq.responseType = "arraybuffer";
-
-oReq.onload = function (oEvent) {
-  var arrayBuffer = oReq.response; // Note: not oReq.responseText
-  if (arrayBuffer) {
-    var byteArray = new Uint8Array(arrayBuffer);
-    for (var i = 0; i < byteArray.byteLength; i++) {
-      // do something with each byte in the array
-    }
-  }
-};
-
-oReq.send(null);
-        
-    }*/
     
 </script>
              </div>  
-            </div>      
+                 
         </main>
         
         <footer>
