@@ -222,45 +222,28 @@
                     </form>
                     
                 </div>
-
+                </div>
             </div>
             
+            
+
+
             <div id="file" style="display: none;">
-
-
             <h1>File - Upload</h1>
-
                
                 <div>
   
     <input accept="*" type="file" id="files" name="files[]" multiple onChange="test(this.files)" />
-
-
-      <br> 
-                   <!-- <button type="" id="upload" onsubmit="uploadAjax(this.files)">upload</button>
-                       
-                    <br>-->
-
-      <br>              
-
-    
-
                 </br> 
                 </br>
     <img id="bild">
-               
     
 <script>
     function test(fileObj) {
-         //for(var i; i<fileObj.length; i++) {
-             
-        
         var objectURL = window.URL.createObjectURL(fileObj[0]);    
         document.getElementById("bild").setAttribute("src", objectURL);
-            
+       
     }
-    
-    
 </script>
              </div>  
                  
