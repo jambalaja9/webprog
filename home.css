@@ -1,3 +1,4 @@
+/*Styles für die Kalender und File-Sharung Buttons*/
 .buttonafterhome{
     width: 300px;
     height: 300px;
@@ -23,6 +24,7 @@
     cursor:pointer;
 }
 
+/*Styles für Textarea für die Kommentare*/
 #commentcontent{
     font-family: sans-serif;
     resize: none;
@@ -31,6 +33,7 @@
     box-shadow: inset 0px 0px 10px 1px rgba(217,217,217,1);
 }
 
+/*Styles für den Kommentarbutton*/
 #commentbutton{
     width: 200px;
     height: 50px;
@@ -43,12 +46,14 @@
     cursor:pointer;
 }
 
+/*Styles für die Tabelle für Button und Textarea*/
 #commentform{
     border: 1px solid #e6e6e6;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px 0.5px rgba(0,0,0,0.25);
 }
 
+/*Styles für ein div auf der "File-Sharing" Seite*/
 #bild {
     padding-top: 20px;;
     height: 100%;
@@ -56,6 +61,7 @@
     
 }
  
+/*Styles für Input-Komponenten*/
 input {
     
     width: 500px;

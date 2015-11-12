@@ -1,6 +1,8 @@
+//Eventlistener für die Navigation mithilfe der History API.
+
 window.addEventListener("popstate",navigate);
 
-
+//Funktionen die die URL ändert.
 function navcalendar(){
     
     history.pushState(null,"" ,"calendar.html");
@@ -14,6 +16,8 @@ function navfile(){
 }
 
 
+
+//Funktion, die das richtige div anzeigt, je nachdem wohin man navigiert.
 
 function navigate() {
           

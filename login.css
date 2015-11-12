@@ -1,14 +1,16 @@
+/*Styles für den Inhalt des Footer*/
 p.footer{
 font-family:sans-serif;
 font-size: 9px
 }
 
+/*Styles für den Hintergrund*/
 body{
     background-image: url(bilder/background.png);
     background-repeat: repeat;
     font-family: sans-serif;
 }
-
+/*Styles für den Header*/
 header{
 border-style: hidden;
 border-color: #ff0000;
@@ -22,17 +24,20 @@ box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.5);
     margin: 0px 5% 10px 5%;
 }
 
+/*Styles für den Überschrift im Header*/
 .title{
     margin-bottom: 5px;
 }
 
 
-
+/*Styles für das div mit der Loginform*/
 #login{
     padding-top: 150px;
     
 }
 
+
+/*Styles für die Logintabelle*/
 #logint{
     padding: 20px;
     border: solid 1px;
@@ -46,6 +51,7 @@ box-shadow: 10px 10px 51px -1px rgba(0,0,0,0.21);
 -webkit-border-radius: 5px 5px 5px 5px;
 }
 
+/*Styles für die Zellen der Logintabelle*/
 #logint td{
     width: 300px;
     height: 50px;
@@ -53,7 +59,7 @@ box-shadow: 10px 10px 51px -1px rgba(0,0,0,0.21);
     font-size: 20px;
 }
 
-
+/*Styles für das Inputfeld User*/
 #user {
 padding: 3px;
 height: 26px; 
@@ -62,7 +68,7 @@ width: 250px;
     font-size: 20px;
 }
 
-
+/*Styles für das Inputfeld Passwort*/
 #passwort{
 padding: 3px;
 height: 26px; 
@@ -70,7 +76,7 @@ width: 250px;
     font-size: 26px;
 }
 
-
+/*Styles für den Loginbutton*/
 #loginbutton{
     width: 300px;
     height: 50px;
@@ -89,6 +95,7 @@ width: 250px;
     cursor:pointer;  
 }
 
+/*Styles für den Main*/
 main{
 background-color: #FFFFFF;
 
@@ -107,6 +114,7 @@ min-height: 500px;
 
 }
 
+/*Styles für ein "Wrapper"-div das den Inhalt zentriert*/
 .wrapper{
     width: 100%;
     padding: 0px 0px;
@@ -115,10 +123,19 @@ min-height: 500px;
     align-content: center;
 }
 
+
+
 table {
 background-color: #FFFFFF;
 }
 
+/*Styles für den Inhalt des Footer*/
+p.footer{
+font-family:sans-serif;
+font-size: 9px
+}
+
+/*Styles für den Footer*/
 footer{
 border-style: solid;
 border-color: #ff0000;

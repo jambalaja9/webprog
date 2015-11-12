@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- HTML5 Doctype-->
 <html>
-    <head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="custom.css">    
-    <script type="text/javascript" src="login.js"></script>
-    <script type="text/javascript" src="nav.js"></script>
+    <head><!-- UTF-Codierung Stylesheets und JavaScripte -->
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="custom.css">    
+        <script type="text/javascript" src="login.js"></script>
+        <script type="text/javascript" src="nav.js"></script>
         <script type="text/javascript" src="calendar.js"></script>
 		<link rel="stylesheet" type="text/css" href="calendar.css" />
     </head>
@@ -15,13 +15,11 @@
         <header>
             <h1 class="title">WWI14AMB</h1>
         </header>
-        
+<!--Main-->        
         <main>
-            
+<!--Login-->           
             <div id="login" style="display: block;">
-             
-               <form name="Login" onSubmit="return checkLogin()">
-               
+             <form name="Login" onSubmit="return checkLogin()">
                 <div class="wrapper">   
                 <table id="logint" style="display: inline-block">
                   <tr>
@@ -49,16 +47,13 @@
                       <td id="errorlogin" colspan="2" style="font-size: 85%; color: #FF0000; text-align:center; height: 20px;">
                       </td>
                    </tr>
-                    </table>
-
-                <!-- <p  id="errorlogin" style="color: #FF0000;"> </p>-->
-                    
+                    </table>  
                 </div>
-            </form>
-                
-                
+            </form>             
             </div>
-            
+<!--Ende Login-->
+
+<!--Kalender-->            
             <div id="calendar" style="display: none;">
                 <h1>Kalender</h1>
                 
@@ -171,11 +166,13 @@
                 </table>
 
             </div>
+<!--Ende Kalender-->            
             
+<!--Home Seite -->           
             <div id="home" style="display: none;">
             <h1>Home</h1>
-                <h3 id="welcome"></h3>
-                <div class="wrapper">
+                <h3 id="welcome"></h3><!--Willkommensnachricht -->
+                <div class="wrapper"><!--Hier sind die 2 Buttons für Filesharing und den Kalender die im wrapper zentriert werden.-->
                 <tabe>
                     <tr>
                         <td><input class="buttonafterhome left" type="button" id="calendarbutton" value="Kalender" onclick="navcalendar()"></td>
@@ -185,28 +182,16 @@
                 </div>
                 
               
-                
-                <div id="commentlist">
-
-                    <div class="wrapper">
+                <!--Wrapper div , das ein weiteres Wrapper div enthält in dem die Custom-Components der Kommentare eingefügt werden.-->
+                <div class="wrapper">
                     <h3>Kommentare</h3>
-
                     <div class="wrapper" id="commentlistp">
-                    
-                        
-                    
-
                     </div>
-                </div>
                 
-                <div id="comment">
-                    
+                    <!--Außerdem ist hier ein weiteres Wrapper div, in dem die Tabelle mit der Eingabemöglichkeit für Komentare enthalten ist.-->
+                    <div  class="wrapper" id="comment">
                     <form onSubmit="return comment()">
-                        <div class="wrapper">
-
-
                         <table id="commentform" align="center">
-
                             <tr>
                                 <td>
                                     <textarea id="commentcontent" cols="50" rows="5" required></textarea>
@@ -218,39 +203,39 @@
                                 </td>
                             </tr>
                         </table>
-                        </div>
                     </form>
                     
                 </div>
                 </div>
             </div>
-            
+ <!--Ende Home Seite -->           
             
 
-
+<!--File-Sharing Seite -->
             <div id="file" style="display: none;">
             <h1>File - Upload</h1>
                
                 <div>
-  <!-- Dateien können im Filechooser ausgewählt-->
-    <input accept="*" type="file" id="files" name="files[]" multiple onChange="load(this.files)" />
+                    <!-- Dateien können im Filechooser ausgewählt-->
+                    <input accept="*" type="file" id="files" name="files[]" multiple onChange="load(this.files)" />
                 </br> 
                 </br>
-    <!-- Kontainer für Bildvorschau-->        
-    <img id="bild">
+                    <!-- Kontainer für Bildvorschau-->        
+                    <img id="bild">
     
-<script>
-    //Vorschau in Konatiner laden
-    function load(fileObj) {
-        var objectURL = window.URL.createObjectURL(fileObj[0]);    
-        document.getElementById("bild").setAttribute("src", objectURL);
-       document.getElementById("bild").setAttribute("alt", fileObj[0].getTrustedUrl);
-    }
-</script>
-             </div>  
+                <script>
+                //Vorschau in Konatiner laden
+                function load(fileObj) {
+                var objectURL = window.URL.createObjectURL(fileObj[0]);    
+                document.getElementById("bild").setAttribute("src", objectURL);
+                document.getElementById("bild").setAttribute("alt", fileObj[0].getTrustedUrl);
+                }
+                </script>
+             </div> 
+<!--Ende File-Sharing Seite -->
                  
         </main>
-        
+<!--Footer -->        
         <footer>
         <p class="footer">&copy; by Raphael, Maria, Maike, Patrick</p>
         </footer>
