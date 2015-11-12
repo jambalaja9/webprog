@@ -232,17 +232,19 @@
             <h1>File - Upload</h1>
                
                 <div>
-  
+  <!-- Dateien können im Filechooser ausgewählt-->
     <input accept="*" type="file" id="files" name="files[]" multiple onChange="test(this.files)" />
                 </br> 
                 </br>
+    <!-- Kontainer für Bildvorschau-->        
     <img id="bild">
     
 <script>
+    //Vorschau in Konatiner laden
     function test(fileObj) {
         var objectURL = window.URL.createObjectURL(fileObj[0]);    
         document.getElementById("bild").setAttribute("src", objectURL);
-       
+       document.getElementById("bild").setAttribute("alt", fileObj[0].getTrustedUrl);
     }
 </script>
              </div>  
